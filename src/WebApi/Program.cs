@@ -38,6 +38,11 @@ app.MapGet("/ping", () =>
     return "pong";
 });
 
+app.MapGet("/", () =>
+{
+    return "v1";
+});
+
 app.Run();
 
 internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
